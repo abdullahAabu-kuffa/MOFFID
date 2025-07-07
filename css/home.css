@@ -1,0 +1,140 @@
+/* 1. Global Reset and Box Model */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Layout Container */
+.homePage {
+    display: grid;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding: 10px;
+    gap: 5px;
+    /* Grid Layout */
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 60px auto 50px;
+    grid-template-areas:
+        "log log link link link link link link link link"
+        "cont cont cont cont cont cont cont cont cont side"
+        "foot foot foot foot foot foot foot foot foot foot";
+}
+
+/* 3. Header / Logo */
+h2 {
+    grid-area: log;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+h4 {
+    grid-area: log;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.nav-list {
+    width: 50%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+}
+
+/* 4. Navigation Bar */
+nav {
+    grid-area: link;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+aside {
+    grid-area: side;
+    background-color: #fff;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 5. Navigation List */
+ul {
+    list-style-type: none;
+    padding-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+ul li {
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* 6. Main Content */
+section {
+    grid-area: cont;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    overflow-y: auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 7. Sidebar */
+a {
+    color: rgb(13, 13, 225);
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s ease;
+    -webkit-transition: color 0.3s ease, transform 0.2s ease;
+    -moz-transition: color 0.3s ease, transform 0.2s ease;
+    -ms-transition: color 0.3s ease, transform 0.2s ease;
+    -o-transition: color 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+    color: #d61717;
+    /* red shade */
+    transform: scale(1.05);
+}
+
+
+/* 8. Footer */
+footer {
+    grid-area: foot;
+    background-color: gray;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
