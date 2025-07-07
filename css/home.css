@@ -24,7 +24,7 @@
 /* 3. Header / Logo */
 h2 {
     grid-area: log;
-    background-color: black;
+    background-color: #3f72bb;
     color: white;
     font-size: 24px;
     display: flex;
@@ -40,7 +40,7 @@ h2 {
 
 h4 {
     grid-area: log;
-    background-color: black;
+    background-color: #3f72bb;
     color: white;
     font-size: 18px;
     display: flex;
