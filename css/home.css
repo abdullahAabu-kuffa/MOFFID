@@ -5,6 +5,11 @@
     padding: 0;
 }
 
+:root {
+    --mainColor: #3f72bb;
+    --scondColor: whitesmoke;
+}
+
 /* 2. Layout Container */
 .homePage {
     display: grid;
@@ -16,17 +21,32 @@
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: 60px auto 50px;
     grid-template-areas:
-        "log log link link link link link link link link"
-        "cont cont cont cont cont cont cont cont cont side"
+        "log link link link link link link link link link"
+        "cont cont cont cont cont cont cont side side side"
         "foot foot foot foot foot foot foot foot foot foot";
+}
+
+#icon {
+    width: 30px;
+    height: 30px;
+    margin: 0px 20px 0 10px;
+}
+
+#iconProfile {
+    width: 30px;
+    height: 30px;
+    margin: 0px 10px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 /* 3. Header / Logo */
 h2 {
     grid-area: log;
-    background-color: #3f72bb;
-    color: white;
+    background-color: var(--mainColor);
+    color: var(--scondColor);
     font-size: 24px;
+    padding: 0px 12px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,8 +60,8 @@ h2 {
 
 h4 {
     grid-area: log;
-    background-color: #3f72bb;
-    color: white;
+    background-color: var(--mainColor);
+    color: var(--scondColor);
     font-size: 18px;
     display: flex;
     align-items: center;
@@ -56,29 +76,28 @@ h4 {
 
 .nav-list {
     width: 50%;
-    background-color: white;
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 /* 4. Navigation Bar */
 nav {
     grid-area: link;
-    background-color: #fff;
+    background-color: var(--scondColor);
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding: 20px;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 aside {
     grid-area: side;
-    background-color: #fff;
+    background-color: var(--scondColor);
     display: inline-block;
     padding: 20px;
     border-radius: 5px;
@@ -101,17 +120,20 @@ ul li {
 /* 6. Main Content */
 section {
     grid-area: cont;
-    background-color: white;
-    color: black;
+    background-color: var(--scondColor);
+    color: var(--mainColor);
     padding: 20px;
     border-radius: 5px;
     overflow-y: auto;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
 }
 
 /* 7. Sidebar */
 a {
-    color: rgb(13, 13, 225);
+    color: var(--mainColor);
     display: inline-block;
     text-decoration: none;
     font-weight: bold;
@@ -132,7 +154,7 @@ a:hover {
 /* 8. Footer */
 footer {
     grid-area: foot;
-    background-color: gray;
+    background-color: whitesmoke;
     text-align: center;
     padding: 10px;
     font-weight: bold;
